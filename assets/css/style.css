@@ -40,11 +40,17 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     color: #000;
+    background: linear-gradient(#F5BB00, #F5BB00) no-repeat left 1.4rem;
+    background-size: 0 4px;
+    transition: background 0.3s ease;
 }
 
-.lista_item button {
-    height: 2.5rem;
-    width: 7.5rem;
+.lista_item a:hover {
+    background-size: 100% 4px;
+}
+
+.lista_item:nth-child(4) a {
+    padding: 10px 16px;
     background-color: #F5BB00;
     border-radius: 4px;
 }
@@ -62,7 +68,6 @@ body {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: -160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     left: -20px;
@@ -91,6 +96,7 @@ body {
 /* conteudo */
 
 main {
+    margin-top: 100px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -98,7 +104,7 @@ main {
 
 section {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 
@@ -107,12 +113,12 @@ section {
 .apresentacao {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 100px;
     position: relative;
     justify-items: center;
 }
 
 .apresentacao_infos {
+    width: 17rem;
     display: flex;
     flex-direction: column;
 }
@@ -123,36 +129,42 @@ section {
     justify-content: center;
     flex-direction: column;
     gap: 25px;
-    width: 100%;
 }
 
 .apresentacao_texto .titulo_infos {
     font-size: 36px;
-    width: 17.25rem;
-    text-align: center;
+    text-align: left;
     font-family: 'Roboto', sans-serif;
 }
 
 .apresentacao_texto p {
-    width: 276px;
     font-family: 'Ruda', sans-serif;
     font-size: 16px;
+    color: #797979;
 }
 
 picture {
     max-width: 50%;
 }
 
-.apresentacao_infos button {
-    width: 100%;
-    height: 50px;
+.apresentacao_infos a {
+    padding: 20px 110px;
     background-color: #F5BB00;
     border-radius: 4px;
+    margin-top: 50px;
+    transition: .3s ease-in-out;
 }
 
-.apresentacao_infos div button a {
+.apresentacao_infos button:active,
+.apresentacao_infos button:hover {
+    transform: translateY(-4px);
+    box-shadow: 1px 22px 10px rgb(195, 195, 195);
+}
+
+.apresentacao_texto a {
     color: #574A1E;
-    font-size: 16px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .apresentacao picture img {
@@ -171,6 +183,7 @@ picture {
 
 .servicos_cards {
     width: 100%;
+    padding: 50px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -180,7 +193,18 @@ picture {
     /* 46px */
 }
 
-.servicos_section h1 {
+.servicos_titulo {
+    position: relative;
+}
+
+.servicos_titulo span {
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background-color: #F5BB00;
+}
+
+.servicos_titulo h1 {
     font-size: 40px;
     font-family: 'Ruda', sans-serif;
 }
@@ -238,6 +262,44 @@ picture {
 .card_infos p {
     font-size: 16px;
     font-family: 'Ruda', sans-serif;
+    color: #797979;
+}
+
+
+/* O que fazemos - Section */
+
+.oquefazemos_section {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+.oquefazemos__textos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    width: 267px
+}
+
+.oquefazemos__textos a {
+    background: #F5BB00;
+    padding: 16px 20%;
+}
+
+.oquefazemos__foto {
+    width: 20%;
+    position: absolute;
+    top: 300px;
+    z-index: -1;
+}
+
+.oquefazemos__foto img {
+    max-width: 100%;
 }
 
 @media screen and (min-width:769px) {
@@ -257,15 +319,23 @@ picture {
         display: flex;
         justify-content: center;
     }
+    .apresentacao_texto {
+        width: 270px;
+    }
+    .apresentacao_texto p {
+        width: inherit;
+        font-size: 24px
+    }
     picture {
         display: none;
     }
-    .servicos_cards {
+    .servicos_cards,
+    .oquefazemos_section {
         flex-direction: column;
     }
     .card picture {
         width: 100px;
-        left: 100px;
+        left: 95px;
     }
     .card img {
         width: 100%;
@@ -277,6 +347,6 @@ picture {
     .card picture {
         width: 90px;
         height: 90px;
-        left: 100px;
+        left: 90px;
     }
 } */
