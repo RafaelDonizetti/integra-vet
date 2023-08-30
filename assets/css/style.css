@@ -80,7 +80,7 @@ body {
 .dropbtn {
     color: #574A1E;
     background-color: #F5BB00;
-    padding: 10px;
+    padding: 12px 18px;
     border-radius: 4px;
     text-decoration: none;
     transition: 0.4s ease-out;
@@ -170,10 +170,10 @@ picture {
 }
 
 .servicos_cards {
-    width: 70%;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 4.6875rem;
     /* 75px */
     margin-top: 106px;
@@ -187,7 +187,7 @@ picture {
 
 .card {
     width: 18.125rem;
-    height: 18.125rem;
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -208,8 +208,8 @@ picture {
 }
 
 .card picture {
-    /* width: 100px;
-    height: 100px; */
+    width: 100px;
+    height: 100px;
     padding: 20px;
     border-radius: 50%;
     background: #F5BB00;
@@ -264,11 +264,19 @@ picture {
         flex-direction: column;
     }
     .card picture {
-        width: 30%;
-        height: 30%;
-        left: 120px;
+        width: 100px;
+        left: 100px;
     }
     .card img {
         width: 100%;
     }
 }
+
+
+/* @media screen and (min-width:1024px) {
+    .card picture {
+        width: 90px;
+        height: 90px;
+        left: 100px;
+    }
+} */
