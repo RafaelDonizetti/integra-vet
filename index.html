@@ -7,6 +7,7 @@
     <meta name="description" content="Web site criado com intuíto de conectar médico veterinários com colegas de trabalho e seus pacientes.">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>IntegraVet | Home</title>
 </head>
 
@@ -24,7 +25,7 @@
                 <a href="">Contato</a>
             </li>
             <li class="lista_item">
-                <button><a href="">LOGIN</a></button>
+                <a href="">LOGIN</a>
             </li>
         </ul>
         <div class="dropdown">
@@ -47,7 +48,7 @@
                         Fale com um Vet por chat para te ajudar!
                     </h1>
                     <p>Receba orientação veterinária especializada, sem sair de casa e na palma da sua mão.</p>
-                    <button><a href="">CHAT</a></button>
+                    <a href="">CHAT</a>
                 </div>
                 <!-- <img class="folha2" src="./assets/img/folhas-vetor.svg" alt=""> -->
             </div>
@@ -59,7 +60,10 @@
 
 
         <section class="servicos_section">
-            <h1>Cuide do seu pet!</h1>
+            <div class="servicos_titulo">
+                <h1>Cuide do seu pet!</h1>
+                <span></span>
+            </div>
             <div class="servicos_cards">
                 <div class="card">
                     <picture><img src="./assets/img/heart-solid.svg" alt=""></picture>
@@ -85,34 +89,54 @@
             </div>
         </section>
 
-        <section>
-            <div>
+        <section class="oquefazemos_section">
+            <div class="oquefazemos__textos">
                 <h1>O que fazemos?</h1>
                 <p>Fornecemos orientações veterinárias sobre saúde, bem estar, comportamento, nutrição, criação, ambiente, prevenção de doenças, estilo de vida, e documentações de cães e gatos.</p>
-                <button><a href="">Contate-nos</a></button>
+                <a href="">Contate-nos</a>
             </div>
-        </section>
-
-        <section>
-            <div>
-                <h1>Orientação veterinária:</h1>
-                <ul>
-                    <li>Saúde</li>
-                    <span></span>
-                    <li>Bem estar</li>
-                    <span></span>
-                    <li>Comportamento</li>
-                    <span></span>
-                    <li>Nutrição</li>
-                    <span></span>
-                    <li>Criação</li>
-                    <span></span>
-                    <li>Documentação</li>
-                    <span></span>
+            <div class="oquefazemos__tabela">
+                <h1 class="tabela_titulo">Orientação veterinária:</h1>
+                <ul class="tabela">
+                    <li class="tabela-item">Saúde</li>
+                    <span class="tabela-detalhe"></span>
+                    <li class="tabela-item">Bem estar</li>
+                    <span class="tabela-detalhe"></span>
+                    <li class="tabela-item">Comportamento</li>
+                    <span class="tabela-detalhe"></span>
+                    <li class="tabela-item">Nutrição</li>
+                    <span class="tabela-detalhe"></span>
+                    <li class="tabela-item">Criação</li>
+                    <span class="tabela-detalhe"></span>
+                    <li class="tabela-item">Documentação</li>
+                    <span class="tabela-detalhe"></span>
                 </ul>
+                <!-- <picture class="oquefazemos__foto">
+                    <img src="./assets/img/cao-pug-isolado-em-um-fundo-branco (1) (1).jpg" alt="Foto de um cabecalho da raça pug em um fundo branco">
+                </picture> -->
             </div>
+
         </section>
     </main>
+    <script>
+        ScrollReveal().reveal('.apresentacao', {
+            delay: 500,
+            distance: '100px',
+            reset: true,
+            cleanup: true,
+            duration: 1000,
+            origin: 'left'
+        });
+        ScrollReveal().reveal('.card', {
+            delay: 500,
+            distance: '200px',
+            reset: true,
+            cleanup: true,
+            duration: 1000,
+            origin: 'left',
+            interval: 200
+        });
+    </script>
 </body>
 
 </html>
