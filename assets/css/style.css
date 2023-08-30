@@ -13,10 +13,12 @@ body {
     height: 100vh;
 }
 
-.cabecalho_detalhe {
+.cabecalho_detalhe,
+.rodape_logo {
     width: 100px;
     height: 100px;
     background-color: black;
+    display: block;
 }
 
 .cabecalho {
@@ -279,27 +281,125 @@ picture {
 
 .oquefazemos__textos {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     flex-direction: column;
     gap: 25px;
-    width: 267px
+    width: 267px;
+}
+
+.oquefazemos__textos h1 {
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.oquefazemos__textos p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #797979;
 }
 
 .oquefazemos__textos a {
     background: #F5BB00;
-    padding: 16px 20%;
+    padding: 14px 20%;
+    border-radius: 4px;
+    color: #574A1E;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.oquefazemos__tabela {
+    height: 340px;
+    width: 267px;
+    background-color: #F5BB00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 30px 20px;
+    color: #574A1E;
+    border-radius: 8px;
+}
+
+.tabela {
+    position: absolute;
+    top: 100px;
+    left: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.tabela_titulo {
+    font-size: 20px;
+    font-family: 'Ruda', sans-serif;
+}
+
+.tabela-item {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .oquefazemos__foto {
-    width: 20%;
+    width: 30%;
     position: absolute;
-    top: 300px;
+    left: 900px;
     z-index: -1;
 }
 
 .oquefazemos__foto img {
     max-width: 100%;
+}
+
+
+/* Roda-pé */
+
+.rodape {
+    height: 30vh;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.rodape_detalhe {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #e2e2e2;
+    top: -5px;
+}
+
+.rodape_info .rodape_grupo {
+    display: flex;
+    gap: 100px;
+}
+
+.rodape__info_atendimento,
+.rodape__info_Institucional {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.rodape__info_atendimento ul,
+.rodape__info_Institucional ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rodape__info_atendimento ul a,
+.rodape__info_Institucional ul a {
+    color: #797979;
+}
+
+@media screen and (max-width:1024px) {
+    .oquefazemos__foto {
+        display: none;
+    }
 }
 
 @media screen and (min-width:769px) {
@@ -342,11 +442,12 @@ picture {
     }
 }
 
-
-/* @media screen and (min-width:1024px) {
-    .card picture {
-        width: 90px;
-        height: 90px;
-        left: 90px;
+@media screen and (max-width:577px) {
+    .rodape {
+        height: 80vh;
     }
-} */
+    .rodape,
+    .rodape_grupo {
+        flex-direction: column;
+    }
+}
