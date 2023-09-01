@@ -21,7 +21,7 @@ body {
     display: block;
 }
 
-.cabecalho {
+.cabecalho .cabecalho_nav {
     z-index: 999;
     display: flex;
     justify-content: space-around;
