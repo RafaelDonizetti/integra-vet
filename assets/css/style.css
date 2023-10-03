@@ -11,6 +11,9 @@
 body {
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .cabecalho_detalhe,
@@ -21,7 +24,7 @@ body {
     display: block;
 }
 
-.cabecalho .cabecalho_nav {
+.cabecalho {
     z-index: 999;
     display: flex;
     justify-content: space-around;
@@ -29,6 +32,13 @@ body {
     width: 100%;
     height: 8.125rem;
     background: #fff;
+}
+
+.cabecalho_nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
 }
 
 .cabecalho_lista {
@@ -102,10 +112,11 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 section {
-    width: 100%;
+    width: 80%;
     min-height: 100vh;
 }
 
@@ -184,7 +195,7 @@ picture {
 }
 
 .servicos_cards {
-    width: 100%;
+    width: 80%;
     padding: 50px;
     display: flex;
     align-items: center;
@@ -227,10 +238,6 @@ picture {
 
 .card:hover {
     background-color: #e8e8e8;
-}
-
-.card img {
-    max-width: 50px;
 }
 
 .card picture {
@@ -400,6 +407,16 @@ picture {
     .oquefazemos__foto {
         display: none;
     }
+    .servicos_cards {
+        flex-direction: column;
+    }
+    .card picture {
+        width: 100px;
+        left: 95px;
+    }
+    .card img {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width:769px) {
@@ -429,16 +446,8 @@ picture {
     picture {
         display: none;
     }
-    .servicos_cards,
     .oquefazemos_section {
         flex-direction: column;
-    }
-    .card picture {
-        width: 100px;
-        left: 95px;
-    }
-    .card img {
-        width: 100%;
     }
 }
 
