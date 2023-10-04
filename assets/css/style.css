@@ -13,10 +13,8 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
-.cabecalho_detalhe,
 .rodape_logo {
     width: 100px;
     height: 100px;
@@ -24,14 +22,25 @@ body {
     display: block;
 }
 
+
+/* Header */
+
 .cabecalho {
     z-index: 999;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     width: 100%;
     height: 8.125rem;
     background: #fff;
+}
+
+.cabecalho_logo {
+    width: 150px;
+    height: 150px;
+}
+
+.cabecalho_logo img {
+    max-width: 100%;
 }
 
 .cabecalho_nav {
