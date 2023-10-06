@@ -446,13 +446,14 @@ picture {
         justify-content: center;
     }
     .apresentacao_texto {
-        width: 270px;
+        width: 100%;
     }
     .apresentacao_texto p {
         width: inherit;
         font-size: 24px
     }
-    picture {
+    .apresentacao picture,
+    .oquefazemos__foto {
         display: none;
     }
     .oquefazemos_section {
