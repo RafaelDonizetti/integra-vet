@@ -412,6 +412,15 @@ picture {
     color: #797979;
 }
 
+@media screen and (max-width:1440px) {
+    .oquefazemos__foto {
+        left: 700px;
+    }
+    .servicos_section {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width:1024px) {
     .oquefazemos__foto {
         display: none;
